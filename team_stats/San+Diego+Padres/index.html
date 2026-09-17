@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimme Rubies — Team Stats</title>
+    <link rel="stylesheet" href="/dirtball/style.css">
+    <script src="/dirtball/chart.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="/dirtball/">&#9918; Gimme Rubies</a>
+            <span class="nav-subtitle">See how much you'd lose over time</span>
+        </div>
+        <div class="nav-links">
+            <a href="/dirtball/" class="">Home</a>
+            
+            <a href="/dirtball/scores" class="">Scores</a>
+            <a href="/dirtball/team_stats" class="active">Team Stats</a>
+            
+            <a href="/dirtball/predictions" class="nav-highlight ">Predictions</a>
+            <a href="/dirtball/standings" class="">Standings</a>
+            
+        </div>
+    </nav>
+
+    <main class="container">
+        
+
+        <h1>Team Stats</h1>
+
+<div class="filter-bar">
+    
+        <label>View:
+            <select id="team-view">
+                <option value="" disabled selected>Team Detail</option>
+                <option value="wins" >Most Wins</option>
+                <option value="losses" >Most Losses</option>
+                <option value="runs_scored" >Most Runs Scored</option>
+                <option value="runs_allowed" >Most Runs Allowed</option>
+            </select>
+        </label>
+        
+        <label>Team:
+            <select id="team-select">
+                <option value="">Go to team page&hellip;</option>
+                
+                <option value="American All-Stars" >American All-Stars</option>
+                
+                <option value="Arizona Diamondbacks" >Arizona Diamondbacks</option>
+                
+                <option value="Athletics" >Athletics</option>
+                
+                <option value="Atlanta Braves" >Atlanta Braves</option>
+                
+                <option value="Baltimore Orioles" >Baltimore Orioles</option>
+                
+                <option value="Boston Red Sox" >Boston Red Sox</option>
+                
+                <option value="Chicago Cubs" >Chicago Cubs</option>
+                
+                <option value="Chicago White Sox" >Chicago White Sox</option>
+                
+                <option value="Cincinnati Reds" >Cincinnati Reds</option>
+                
+                <option value="Cleveland Guardians" >Cleveland Guardians</option>
+                
+                <option value="Colorado Rockies" >Colorado Rockies</option>
+                
+                <option value="Detroit Tigers" >Detroit Tigers</option>
+                
+                <option value="Houston Astros" >Houston Astros</option>
+                
+                <option value="Kansas City Royals" >Kansas City Royals</option>
+                
+                <option value="Los Angeles Angels" >Los Angeles Angels</option>
+                
+                <option value="Los Angeles Dodgers" >Los Angeles Dodgers</option>
+                
+                <option value="Miami Marlins" >Miami Marlins</option>
+                
+                <option value="Milwaukee Brewers" >Milwaukee Brewers</option>
+                
+                <option value="Minnesota Twins" >Minnesota Twins</option>
+                
+                <option value="National All-Stars" >National All-Stars</option>
+                
+                <option value="New York Mets" >New York Mets</option>
+                
+                <option value="New York Yankees" >New York Yankees</option>
+                
+                <option value="Philadelphia Phillies" >Philadelphia Phillies</option>
+                
+                <option value="Pittsburgh Pirates" >Pittsburgh Pirates</option>
+                
+                <option value="San Diego Padres" selected>San Diego Padres</option>
+                
+                <option value="San Francisco Giants" >San Francisco Giants</option>
+                
+                <option value="Seattle Mariners" >Seattle Mariners</option>
+                
+                <option value="St. Louis Cardinals" >St. Louis Cardinals</option>
+                
+                <option value="Tampa Bay Rays" >Tampa Bay Rays</option>
+                
+                <option value="Texas Rangers" >Texas Rangers</option>
+                
+                <option value="Toronto Blue Jays" >Toronto Blue Jays</option>
+                
+                <option value="Washington Nationals" >Washington Nationals</option>
+                
+            </select>
+        </label>
+        
+    
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var viewSel = document.getElementById('team-view');
+    var teamSel = document.getElementById('team-select');
+    if (viewSel) {
+        viewSel.addEventListener('change', function() {
+            location.href = window.SITE_BASE + 'team_stats/#view=' + viewSel.value;
+        });
+    }
+    if (teamSel) {
+        teamSel.addEventListener('change', function() {
+            if (teamSel.value) {
+                location.href = window.SITE_BASE + 'team_stats/' + encodeURIComponent(teamSel.value) + '/';
+            }
+        });
+    }
+});
+</script>
+
+
+<div class="team-header">
+    <img src='/dirtball/logos/sd.png' width='48' height='48' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='San Diego Padres' />
+    <h2>San Diego Padres</h2>
+</div>
+
+<div class="stats-cards">
+    <div class="stat-card"><div class="stat-value">152</div><div class="stat-label">Games</div></div>
+    <div class="stat-card"><div class="stat-value">83-69</div><div class="stat-label">W-L (54.6%)</div></div>
+    <div class="stat-card"><div class="stat-value">46-29</div><div class="stat-label">Home</div></div>
+    <div class="stat-card"><div class="stat-value">37-40</div><div class="stat-label">Away</div></div>
+    <div class="stat-card"><div class="stat-value" style="letter-spacing:2px;font-family:monospace;">WWWLW</div><div class="stat-label">Form (last 5)</div></div>
+    <div class="stat-card"><div class="stat-value">4.3</div><div class="stat-label">Runs/Game (vs 4.2 allowed)</div></div>
+    <div class="stat-card stat-positive"><div class="stat-value">+23</div><div class="stat-label">Run Diff</div></div>
+</div>
+
+<hr>
+<h2>Season Form</h2>
+<div class="chart-container" style="height: 220px; margin-bottom: 1.5rem;">
+    <canvas id="form-chart"></canvas>
+</div>
+
+<hr>
+<h2>Recent Results</h2>
+
+<table class="data-table">
+<thead><tr><th>Date (CET)</th><th>Loc</th><th>Opponent</th><th>Score</th><th>Diff</th><th>Status</th></tr></thead>
+<tbody>
+<tr class="row-won">
+    <td>17 Sep 02:41</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/col.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Colorado Rockies' />Colorado Rockies</td>
+    <td>9 &ndash; 3</td>
+    <td>+6</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-lost">
+    <td>16 Sep 02:40</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/col.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Colorado Rockies' />Colorado Rockies</td>
+    <td>3 &ndash; 9</td>
+    <td>-6</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-won">
+    <td>15 Sep 02:41</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/col.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Colorado Rockies' />Colorado Rockies</td>
+    <td>8 &ndash; 7</td>
+    <td>+1</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-won">
+    <td>14 Sep 01:20</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/sf.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='San Francisco Giants' />San Francisco Giants</td>
+    <td>6 &ndash; 4</td>
+    <td>+2</td>
+    <td>Unknown</td>
+</tr>
+<tr class="row-won">
+    <td>12 Sep 22:06</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/sf.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='San Francisco Giants' />San Francisco Giants</td>
+    <td>7 &ndash; 6</td>
+    <td>+1</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-won">
+    <td>12 Sep 04:16</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/sf.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='San Francisco Giants' />San Francisco Giants</td>
+    <td>7 &ndash; 5</td>
+    <td>+2</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-won">
+    <td>09 Sep 22:11</td>
+    <td>Home</td>
+    <td><img src='/dirtball/logos/wsh.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Washington Nationals' />Washington Nationals</td>
+    <td>9 &ndash; 2</td>
+    <td>+7</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-won">
+    <td>09 Sep 03:41</td>
+    <td>Home</td>
+    <td><img src='/dirtball/logos/wsh.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Washington Nationals' />Washington Nationals</td>
+    <td>5 &ndash; 4</td>
+    <td>+1</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-won">
+    <td>07 Sep 23:11</td>
+    <td>Home</td>
+    <td><img src='/dirtball/logos/wsh.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Washington Nationals' />Washington Nationals</td>
+    <td>3 &ndash; 2</td>
+    <td>+1</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-won">
+    <td>06 Sep 22:10</td>
+    <td>Home</td>
+    <td><img src='/dirtball/logos/nyy.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='New York Yankees' />New York Yankees</td>
+    <td>4 &ndash; 3</td>
+    <td>+1</td>
+    <td>Underdog</td>
+</tr>
+<tr class="row-lost">
+    <td>06 Sep 01:16</td>
+    <td>Home</td>
+    <td><img src='/dirtball/logos/nyy.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='New York Yankees' />New York Yankees</td>
+    <td>1 &ndash; 5</td>
+    <td>-4</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-won">
+    <td>05 Sep 03:41</td>
+    <td>Home</td>
+    <td><img src='/dirtball/logos/nyy.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='New York Yankees' />New York Yankees</td>
+    <td>3 &ndash; 2</td>
+    <td>+1</td>
+    <td>Underdog</td>
+</tr>
+<tr class="row-lost">
+    <td>02 Sep 18:41</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/cin.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Cincinnati Reds' />Cincinnati Reds</td>
+    <td>3 &ndash; 7</td>
+    <td>-4</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-lost">
+    <td>02 Sep 00:41</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/cin.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Cincinnati Reds' />Cincinnati Reds</td>
+    <td>3 &ndash; 4</td>
+    <td>-1</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-won">
+    <td>01 Sep 00:41</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/cin.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Cincinnati Reds' />Cincinnati Reds</td>
+    <td>5 &ndash; 0</td>
+    <td>+5</td>
+    <td>Favorite</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+<div class="charts-row">
+    <div class="chart-half">
+        <h2>Record by Location</h2>
+        <div class="chart-container chart-small"><canvas id="location-chart"></canvas></div>
+    </div>
+    <div class="chart-half">
+        <h2>Win/Loss by Favorite Status</h2>
+        <div class="chart-container chart-small"><canvas id="fav-chart"></canvas></div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var formCtx = document.getElementById('form-chart');
+    if (formCtx) {
+        var formGames = [{"date":"2026-07-23T16:16:00Z","won":false,"rd":-1,"opp":"Atlanta Braves","score":"5-6","home":false},{"date":"2026-07-24T23:11:00Z","won":true,"rd":2,"opp":"Miami Marlins","score":"4-2","home":false},{"date":"2026-07-25T20:10Z","won":true,"rd":5,"opp":"Miami Marlins","score":"7-2","home":false},{"date":"2026-07-26T17:40Z","won":true,"rd":2,"opp":"Miami Marlins","score":"5-3","home":false},{"date":"2026-07-29T01:41:00Z","won":true,"rd":1,"opp":"Colorado Rockies","score":"8-7","home":true},{"date":"2026-07-29T20:11:00Z","won":true,"rd":2,"opp":"Colorado Rockies","score":"3-1","home":true},{"date":"2026-07-31T01:41:00Z","won":false,"rd":-3,"opp":"San Francisco Giants","score":"1-4","home":true},{"date":"2026-08-01T01:46:00Z","won":true,"rd":7,"opp":"San Francisco Giants","score":"7-0","home":true},{"date":"2026-08-02T00:41:00Z","won":true,"rd":1,"opp":"San Francisco Giants","score":"6-5","home":true},{"date":"2026-08-02T20:10Z","won":true,"rd":1,"opp":"San Francisco Giants","score":"5-4","home":true},{"date":"2026-08-04T01:41:00Z","won":false,"rd":-4,"opp":"Arizona Diamondbacks","score":"1-5","home":false},{"date":"2026-08-05T01:41:00Z","won":true,"rd":5,"opp":"Arizona Diamondbacks","score":"9-4","home":false},{"date":"2026-08-06T01:41:00Z","won":false,"rd":-6,"opp":"Arizona Diamondbacks","score":"4-10","home":false},{"date":"2026-08-07T01:41:00Z","won":true,"rd":4,"opp":"Arizona Diamondbacks","score":"5-1","home":false},{"date":"2026-08-08T01:41:00Z","won":false,"rd":-3,"opp":"Houston Astros","score":"3-6","home":true},{"date":"2026-08-08T23:16:00Z","won":true,"rd":1,"opp":"Houston Astros","score":"3-2","home":true},{"date":"2026-08-10T00:20Z","won":true,"rd":5,"opp":"Houston Astros","score":"7-2","home":true},{"date":"2026-08-11T01:41:00Z","won":true,"rd":1,"opp":"Milwaukee Brewers","score":"3-2","home":true},{"date":"2026-08-12T01:41:00Z","won":true,"rd":9,"opp":"Milwaukee Brewers","score":"11-2","home":true},{"date":"2026-08-12T20:10:00Z","won":true,"rd":1,"opp":"Milwaukee Brewers","score":"4-3","home":true},{"date":"2026-08-14T23:11:00Z","won":true,"rd":2,"opp":"Cleveland Guardians","score":"7-5","home":false},{"date":"2026-08-15T23:11:00Z","won":false,"rd":-5,"opp":"Cleveland Guardians","score":"1-6","home":false},{"date":"2026-08-16T17:40Z","won":true,"rd":5,"opp":"Cleveland Guardians","score":"5-0","home":false},{"date":"2026-08-17T23:11:00Z","won":false,"rd":-1,"opp":"New York Mets","score":"1-2","home":false},{"date":"2026-08-18T23:11:00Z","won":true,"rd":3,"opp":"New York Mets","score":"5-2","home":false},{"date":"2026-08-19T17:11:00Z","won":false,"rd":-2,"opp":"New York Mets","score":"2-4","home":false},{"date":"2026-08-22T01:40Z","won":true,"rd":4,"opp":"Minnesota Twins","score":"6-2","home":true},{"date":"2026-08-23T00:40Z","won":true,"rd":2,"opp":"Minnesota Twins","score":"7-5","home":true},{"date":"2026-08-23T20:10Z","won":true,"rd":7,"opp":"Minnesota Twins","score":"8-1","home":true},{"date":"2026-08-25T01:40:00Z","won":false,"rd":-1,"opp":"Pittsburgh Pirates","score":"2-3","home":true},{"date":"2026-08-26T01:40:00Z","won":false,"rd":-1,"opp":"Pittsburgh Pirates","score":"0-1","home":true},{"date":"2026-08-26T20:11:00Z","won":true,"rd":3,"opp":"Pittsburgh Pirates","score":"3-0","home":true},{"date":"2026-08-28T23:11:00Z","won":false,"rd":-5,"opp":"Tampa Bay Rays","score":"4-9","home":false},{"date":"2026-08-29T20:11:00Z","won":false,"rd":-1,"opp":"Tampa Bay Rays","score":"6-7","home":false},{"date":"2026-08-30T17:40Z","won":false,"rd":-1,"opp":"Tampa Bay Rays","score":"4-5","home":false},{"date":"2026-08-31T22:41:00Z","won":true,"rd":5,"opp":"Cincinnati Reds","score":"5-0","home":false},{"date":"2026-09-01T22:41:00Z","won":false,"rd":-1,"opp":"Cincinnati Reds","score":"3-4","home":false},{"date":"2026-09-02T16:41:00Z","won":false,"rd":-4,"opp":"Cincinnati Reds","score":"3-7","home":false},{"date":"2026-09-05T01:41:00Z","won":true,"rd":1,"opp":"New York Yankees","score":"3-2","home":true},{"date":"2026-09-05T23:16:00Z","won":false,"rd":-4,"opp":"New York Yankees","score":"1-5","home":true},{"date":"2026-09-06T20:10:00Z","won":true,"rd":1,"opp":"New York Yankees","score":"4-3","home":true},{"date":"2026-09-07T21:11:00Z","won":true,"rd":1,"opp":"Washington Nationals","score":"3-2","home":true},{"date":"2026-09-09T01:41:00Z","won":true,"rd":1,"opp":"Washington Nationals","score":"5-4","home":true},{"date":"2026-09-09T20:11:00Z","won":true,"rd":7,"opp":"Washington Nationals","score":"9-2","home":true},{"date":"2026-09-12T02:16:00Z","won":true,"rd":2,"opp":"San Francisco Giants","score":"7-5","home":false},{"date":"2026-09-12T20:06:00Z","won":true,"rd":1,"opp":"San Francisco Giants","score":"7-6","home":false},{"date":"2026-09-13T23:20Z","won":true,"rd":2,"opp":"San Francisco Giants","score":"6-4","home":false},{"date":"2026-09-15T00:41:00Z","won":true,"rd":1,"opp":"Colorado Rockies","score":"8-7","home":false},{"date":"2026-09-16T00:40:00Z","won":false,"rd":-6,"opp":"Colorado Rockies","score":"3-9","home":false},{"date":"2026-09-17T00:41:00Z","won":true,"rd":6,"opp":"Colorado Rockies","score":"9-3","home":false}];
+        new Chart(formCtx, {
+            type: 'bar',
+            data: {
+                labels: formGames.map(function(g, i) { return 'G' + (i + 1); }),
+                datasets: [{
+                    data: formGames.map(function(g) { return g.won ? g.rd : g.rd; }),
+                    backgroundColor: formGames.map(function(g) { return g.won ? '#28a745' : '#dc3545'; }),
+                    borderRadius: 2,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            title: function(items) {
+                                var g = formGames[items[0].dataIndex];
+                                return g.opp;
+                            },
+                            label: function(item) {
+                                var g = formGames[item.dataIndex];
+                                var result = g.won ? 'WIN' : 'LOSS';
+                                var loc = g.home ? 'Home' : 'Away';
+                                return result + ' ' + g.score + ' (' + loc + ', RD ' + (g.rd > 0 ? '+' : '') + g.rd + ')';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: { display: true, text: 'Games (oldest → newest)' },
+                        grid: { display: false },
+                        ticks: {
+                            maxRotation: 0,
+                            autoSkip: true,
+                            maxTicksLimit: 20,
+                        }
+                    },
+                    y: {
+                        title: { display: true, text: 'Run Differential' },
+                        grid: { color: '#e0e0e0' },
+                        beginAtZero: true,
+                    }
+                },
+                onClick: function(e, elements) {
+                    if (elements.length > 0) {
+                        var g = formGames[elements[0].index];
+                        var result = g.won ? 'WIN' : 'LOSS';
+                        alert(result + ' vs ' + g.opp + '\nScore: ' + g.score + '\nLocation: ' + (g.home ? 'Home' : 'Away') + '\nRun Diff: ' + (g.rd > 0 ? '+' : '') + g.rd);
+                    }
+                }
+            }
+        });
+    }
+
+    var locCtx = document.getElementById('location-chart');
+    if (locCtx) {
+        new Chart(locCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Home', 'Away'],
+                datasets: [
+                    { label: 'Wins', data: [46, 37], backgroundColor: '#28a745' },
+                    { label: 'Losses', data: [29, 40], backgroundColor: '#dc3545' }
+                ]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+    }
+    var favCtx = document.getElementById('fav-chart');
+    if (favCtx) {
+        new Chart(favCtx, {
+            type: 'bar',
+            data: {
+                labels: ['As Favorite', 'As Underdog'],
+                datasets: [
+                    { label: 'Wins', data: [25, 27], backgroundColor: '#28a745' },
+                    { label: 'Losses', data: [24, 33], backgroundColor: '#dc3545' }
+                ]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+    }
+});
+</script>
+
+
+    </main>
+
+    <footer class="footer">
+        <p>Gimme Rubies &mdash; Educational/demotivational baseball betting tracker. <em>The house always wins.</em></p>
+    </footer>
+
+    <script src="/dirtball/app.js"></script>
+    <script src="/dirtball/site.js"></script>
+</body>
+</html>

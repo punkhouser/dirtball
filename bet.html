@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirtball &mdash; Bet Slip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href=".">&#9918; Gimme Rubies</a>
+            <span class="nav-subtitle">Bet slip &mdash; queues locally, CI resolves</span>
+        </div>
+        <div class="nav-links">
+            <a href=".">Home</a>
+            <a href="scores/">Scores</a>
+            <a href="predictions/">Predictions</a>
+            <a href="standings/">Standings</a>
+            <a href="team_stats/">Team Stats</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Bet Slip</h1>
+        <p class="muted">Fixtures from the latest published snapshot. Queued bets are appended to
+        <code>data/pending_bets.json</code> on your machine &mdash; commit &amp; push before 06:00 UTC
+        and the next CI run imports and resolves them the same morning.</p>
+
+        <div class="bet-settings">
+            <label>Local backend:
+                <input type="text" id="backend-input" placeholder="http://localhost:4567" style="width:240px">
+            </label>
+            <label>Token:
+                <input type="text" id="token-input" placeholder="printed by bet_slip.rb" style="width:280px">
+            </label>
+        </div>
+
+        <div id="flash-area"></div>
+
+        <div id="queue-section" style="display:none">
+            <hr>
+            <h2>Queued locally (not pushed yet)</h2>
+            <div id="queue-list"></div>
+            <p class="muted">Commit &amp; push <code>data/pending_bets.json</code> before 06:00 UTC to have CI
+            resolve these the same run. Cancel a bet by deleting its line from the file before pushing.</p>
+        </div>
+
+        <hr>
+        <div id="fixtures"><p class="muted">Loading fixtures&hellip;</p></div>
+
+        <div id="bet-slip" class="bet-slip" style="display:none">
+            <h2>&#127915; Bet Slip</h2>
+            <div id="bet-slip-items"></div>
+            <div class="bet-slip-controls">
+                <label for="stake">Total stake ($):</label>
+                <input type="number" id="stake" step="any" min="0.01" value="10">
+                <div id="bet-summary" class="bet-summary"></div>
+                <label for="note">Ticket note (optional):</label>
+                <input type="text" id="note" placeholder="Why this bet&hellip;">
+                <button type="button" class="btn btn-primary" id="place-btn">&#9989; Queue Bet</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Gimme Rubies &mdash; Educational/demotivational baseball betting tracker. <em>The house always wins.</em></p>
+    </footer>
+
+    <script src="bet.js"></script>
+</body>
+</html>

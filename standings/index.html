@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimme Rubies — Standings</title>
+    <link rel="stylesheet" href="/dirtball/style.css">
+    <script src="/dirtball/chart.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="/dirtball/">&#9918; Gimme Rubies</a>
+            <span class="nav-subtitle">See how much you'd lose over time</span>
+        </div>
+        <div class="nav-links">
+            <a href="/dirtball/" class="">Home</a>
+            
+            <a href="/dirtball/scores" class="">Scores</a>
+            <a href="/dirtball/team_stats" class="">Team Stats</a>
+            
+            <a href="/dirtball/predictions" class="nav-highlight ">Predictions</a>
+            <a href="/dirtball/standings" class="active">Standings</a>
+            
+        </div>
+    </nav>
+
+    <main class="container">
+        
+
+        <h1>Standings</h1>
+
+
+<div class="standings-tabs">
+  <button type="button" class="sort-link standings-tab" data-view="overall">Overall</button>
+  <button type="button" class="sort-link standings-tab" data-view="AL">American League</button>
+  <button type="button" class="sort-link standings-tab" data-view="NL">National League</button>
+</div>
+
+<div class="sort-links">
+Sort by:
+<button type="button" class="sort-link standings-sort" data-sort="pct" data-dir="desc">PCT</button>
+<button type="button" class="sort-link standings-sort" data-sort="wins" data-dir="desc">W</button>
+<button type="button" class="sort-link standings-sort" data-sort="losses" data-dir="asc">L</button>
+<button type="button" class="sort-link standings-sort" data-sort="rs" data-dir="desc">RS</button>
+<button type="button" class="sort-link standings-sort" data-sort="ra" data-dir="asc">RA</button>
+<button type="button" class="sort-link standings-sort" data-sort="diff" data-dir="desc">Diff</button>
+</div>
+
+  
+    
+    <div class="standings-view" data-view="overall">
+      
+      <table class="data-table standings-table">
+      <thead>
+        <tr>
+          <th>#</th><th>Team</th><th>W</th><th>L</th><th>PCT</th><th>GB</th>
+          <th>RS</th><th>RA</th><th>Diff</th><th>L10</th><th>Streak</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        
+        <tr class="row-won"
+            data-w="95"
+            data-l="57"
+            data-pct="0.625"
+            data-rs="788"
+            data-ra="588"
+            data-diff="200">
+          <td>1</td>
+          <td><img src='/dirtball/logos/mil.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Milwaukee Brewers' /><strong>Milwaukee Brewers</strong></td>
+          <td>95</td>
+          <td>57</td>
+          <td>.625</td>
+          <td>-</td>
+          <td>788</td>
+          <td>588</td>
+          <td>+200</td>
+          <td>7-3</td>
+          <td>W2</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="92"
+            data-l="59"
+            data-pct="0.609"
+            data-rs="688"
+            data-ra="617"
+            data-diff="71">
+          <td>2</td>
+          <td><img src='/dirtball/logos/tb.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Tampa Bay Rays' /><strong>Tampa Bay Rays</strong></td>
+          <td>92</td>
+          <td>59</td>
+          <td>.609</td>
+          <td>-</td>
+          <td>688</td>
+          <td>617</td>
+          <td>+71</td>
+          <td>8-2</td>
+          <td>W5</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="92"
+            data-l="60"
+            data-pct="0.605"
+            data-rs="751"
+            data-ra="578"
+            data-diff="173">
+          <td>3</td>
+          <td><img src='/dirtball/logos/lad.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Los Angeles Dodgers' /><strong>Los Angeles Dodgers</strong></td>
+          <td>92</td>
+          <td>60</td>
+          <td>.605</td>
+          <td>3</td>
+          <td>751</td>
+          <td>578</td>
+          <td>+173</td>
+          <td>7-3</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="89"
+            data-l="64"
+            data-pct="0.582"
+            data-rs="706"
+            data-ra="595"
+            data-diff="111">
+          <td>4</td>
+          <td><img src='/dirtball/logos/atl.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Atlanta Braves' /><strong>Atlanta Braves</strong></td>
+          <td>89</td>
+          <td>64</td>
+          <td>.582</td>
+          <td>6.5</td>
+          <td>706</td>
+          <td>595</td>
+          <td>+111</td>
+          <td>4-6</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="88"
+            data-l="64"
+            data-pct="0.579"
+            data-rs="697"
+            data-ra="561"
+            data-diff="136">
+          <td>5</td>
+          <td><img src='/dirtball/logos/nyy.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='New York Yankees' /><strong>New York Yankees</strong></td>
+          <td>88</td>
+          <td>64</td>
+          <td>.579</td>
+          <td>4.5</td>
+          <td>697</td>
+          <td>561</td>
+          <td>+136</td>
+          <td>7-3</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="85"
+            data-l="68"
+            data-pct="0.556"
+            data-rs="817"
+            data-ra="674"
+            data-diff="143">
+          <td>6</td>
+          <td><img src='/dirtball/logos/chc.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Chicago Cubs' /><strong>Chicago Cubs</strong></td>
+          <td>85</td>
+          <td>68</td>
+          <td>.556</td>
+          <td>10.5</td>
+          <td>817</td>
+          <td>674</td>
+          <td>+143</td>
+          <td>4-6</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="84"
+            data-l="68"
+            data-pct="0.553"
+            data-rs="681"
+            data-ra="650"
+            data-diff="31">
+          <td>7</td>
+          <td><img src='/dirtball/logos/phi.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Philadelphia Phillies' /><strong>Philadelphia Phillies</strong></td>
+          <td>84</td>
+          <td>68</td>
+          <td>.553</td>
+          <td>11</td>
+          <td>681</td>
+          <td>650</td>
+          <td>+31</td>
+          <td>4-6</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="83"
+            data-l="69"
+            data-pct="0.546"
+            data-rs="659"
+            data-ra="636"
+            data-diff="23">
+          <td>8</td>
+          <td><img src='/dirtball/logos/sd.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='San Diego Padres' /><strong>San Diego Padres</strong></td>
+          <td>83</td>
+          <td>69</td>
+          <td>.546</td>
+          <td>12</td>
+          <td>659</td>
+          <td>636</td>
+          <td>+23</td>
+          <td>9-1</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="82"
+            data-l="70"
+            data-pct="0.539"
+            data-rs="668"
+            data-ra="586"
+            data-diff="82">
+          <td>9</td>
+          <td><img src='/dirtball/logos/bos.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Boston Red Sox' /><strong>Boston Red Sox</strong></td>
+          <td>82</td>
+          <td>70</td>
+          <td>.539</td>
+          <td>10.5</td>
+          <td>668</td>
+          <td>586</td>
+          <td>+82</td>
+          <td>5-5</td>
+          <td>L2</td>
+        </tr>
+      
+        
+        <tr class=""
+            data-w="80"
+            data-l="73"
+            data-pct="0.523"
+            data-rs="678"
+            data-ra="678"
+            data-diff="0">
+          <td>10</td>
+          <td><img src='/dirtball/logos/ari.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Arizona Diamondbacks' /><strong>Arizona Diamondbacks</strong></td>
+          <td>80</td>
+          <td>73</td>
+          <td>.523</td>
+          <td>15.5</td>
+          <td>678</td>
+          <td>678</td>
+          <td>0</td>
+          <td>5-5</td>
+          <td>L2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="78"
+            data-l="75"
+            data-pct="0.51"
+            data-rs="631"
+            data-ra="638"
+            data-diff="-7">
+          <td>11</td>
+          <td><img src='/dirtball/logos/cle.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Cleveland Guardians' /><strong>Cleveland Guardians</strong></td>
+          <td>78</td>
+          <td>75</td>
+          <td>.510</td>
+          <td>15</td>
+          <td>631</td>
+          <td>638</td>
+          <td>-7</td>
+          <td>6-4</td>
+          <td>W2</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="77"
+            data-l="75"
+            data-pct="0.507"
+            data-rs="711"
+            data-ra="677"
+            data-diff="34">
+          <td>12</td>
+          <td><img src='/dirtball/logos/chw.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Chicago White Sox' /><strong>Chicago White Sox</strong></td>
+          <td>77</td>
+          <td>75</td>
+          <td>.507</td>
+          <td>15.5</td>
+          <td>711</td>
+          <td>677</td>
+          <td>+34</td>
+          <td>3-7</td>
+          <td>L2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="76"
+            data-l="76"
+            data-pct="0.5"
+            data-rs="675"
+            data-ra="729"
+            data-diff="-54">
+          <td>13</td>
+          <td><img src='/dirtball/logos/hou.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Houston Astros' /><strong>Houston Astros</strong></td>
+          <td>76</td>
+          <td>76</td>
+          <td>.500</td>
+          <td>16.5</td>
+          <td>675</td>
+          <td>729</td>
+          <td>-54</td>
+          <td>3-7</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="76"
+            data-l="76"
+            data-pct="0.5"
+            data-rs="635"
+            data-ra="673"
+            data-diff="-38">
+          <td>14</td>
+          <td><img src='/dirtball/logos/tex.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Texas Rangers' /><strong>Texas Rangers</strong></td>
+          <td>76</td>
+          <td>76</td>
+          <td>.500</td>
+          <td>16.5</td>
+          <td>635</td>
+          <td>673</td>
+          <td>-38</td>
+          <td>6-4</td>
+          <td>W4</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="76"
+            data-l="77"
+            data-pct="0.497"
+            data-rs="619"
+            data-ra="656"
+            data-diff="-37">
+          <td>15</td>
+          <td><img src='/dirtball/logos/tor.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Toronto Blue Jays' /><strong>Toronto Blue Jays</strong></td>
+          <td>76</td>
+          <td>77</td>
+          <td>.497</td>
+          <td>17</td>
+          <td>619</td>
+          <td>656</td>
+          <td>-37</td>
+          <td>4-6</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="76"
+            data-l="77"
+            data-pct="0.497"
+            data-rs="681"
+            data-ra="673"
+            data-diff="8">
+          <td>16</td>
+          <td><img src='/dirtball/logos/mia.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Miami Marlins' /><strong>Miami Marlins</strong></td>
+          <td>76</td>
+          <td>77</td>
+          <td>.497</td>
+          <td>19.5</td>
+          <td>681</td>
+          <td>673</td>
+          <td>+8</td>
+          <td>5-5</td>
+          <td>W2</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="75"
+            data-l="77"
+            data-pct="0.493"
+            data-rs="723"
+            data-ra="702"
+            data-diff="21">
+          <td>17</td>
+          <td><img src='/dirtball/logos/pit.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Pittsburgh Pirates' /><strong>Pittsburgh Pirates</strong></td>
+          <td>75</td>
+          <td>77</td>
+          <td>.493</td>
+          <td>20</td>
+          <td>723</td>
+          <td>702</td>
+          <td>+21</td>
+          <td>5-5</td>
+          <td>L2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="75"
+            data-l="78"
+            data-pct="0.49"
+            data-rs="693"
+            data-ra="707"
+            data-diff="-14">
+          <td>18</td>
+          <td><img src='/dirtball/logos/stl.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='St. Louis Cardinals' /><strong>St. Louis Cardinals</strong></td>
+          <td>75</td>
+          <td>78</td>
+          <td>.490</td>
+          <td>20.5</td>
+          <td>693</td>
+          <td>707</td>
+          <td>-14</td>
+          <td>4-6</td>
+          <td>L2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="75"
+            data-l="78"
+            data-pct="0.49"
+            data-rs="688"
+            data-ra="714"
+            data-diff="-26">
+          <td>19</td>
+          <td><img src='/dirtball/logos/bal.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Baltimore Orioles' /><strong>Baltimore Orioles</strong></td>
+          <td>75</td>
+          <td>78</td>
+          <td>.490</td>
+          <td>18</td>
+          <td>688</td>
+          <td>714</td>
+          <td>-26</td>
+          <td>6-4</td>
+          <td>W3</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="72"
+            data-l="80"
+            data-pct="0.474"
+            data-rs="683"
+            data-ra="607"
+            data-diff="76">
+          <td>20</td>
+          <td><img src='/dirtball/logos/det.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Detroit Tigers' /><strong>Detroit Tigers</strong></td>
+          <td>72</td>
+          <td>80</td>
+          <td>.474</td>
+          <td>20.5</td>
+          <td>683</td>
+          <td>607</td>
+          <td>+76</td>
+          <td>7-3</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="71"
+            data-l="81"
+            data-pct="0.467"
+            data-rs="631"
+            data-ra="779"
+            data-diff="-148">
+          <td>21</td>
+          <td><img src='/dirtball/logos/cin.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Cincinnati Reds' /><strong>Cincinnati Reds</strong></td>
+          <td>71</td>
+          <td>81</td>
+          <td>.467</td>
+          <td>24</td>
+          <td>631</td>
+          <td>779</td>
+          <td>-148</td>
+          <td>3-7</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="71"
+            data-l="81"
+            data-pct="0.467"
+            data-rs="692"
+            data-ra="765"
+            data-diff="-73">
+          <td>22</td>
+          <td><img src='/dirtball/logos/min.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Minnesota Twins' /><strong>Minnesota Twins</strong></td>
+          <td>71</td>
+          <td>81</td>
+          <td>.467</td>
+          <td>21.5</td>
+          <td>692</td>
+          <td>765</td>
+          <td>-73</td>
+          <td>3-7</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="71"
+            data-l="82"
+            data-pct="0.464"
+            data-rs="778"
+            data-ra="775"
+            data-diff="3">
+          <td>23</td>
+          <td><img src='/dirtball/logos/wsh.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Washington Nationals' /><strong>Washington Nationals</strong></td>
+          <td>71</td>
+          <td>82</td>
+          <td>.464</td>
+          <td>24.5</td>
+          <td>778</td>
+          <td>775</td>
+          <td>+3</td>
+          <td>4-6</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="71"
+            data-l="82"
+            data-pct="0.464"
+            data-rs="624"
+            data-ra="680"
+            data-diff="-56">
+          <td>24</td>
+          <td><img src='/dirtball/logos/sea.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Seattle Mariners' /><strong>Seattle Mariners</strong></td>
+          <td>71</td>
+          <td>82</td>
+          <td>.464</td>
+          <td>22</td>
+          <td>624</td>
+          <td>680</td>
+          <td>-56</td>
+          <td>5-5</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="69"
+            data-l="83"
+            data-pct="0.454"
+            data-rs="650"
+            data-ra="693"
+            data-diff="-43">
+          <td>25</td>
+          <td><img src='/dirtball/logos/nym.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='New York Mets' /><strong>New York Mets</strong></td>
+          <td>69</td>
+          <td>83</td>
+          <td>.454</td>
+          <td>26</td>
+          <td>650</td>
+          <td>693</td>
+          <td>-43</td>
+          <td>5-5</td>
+          <td>L4</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="67"
+            data-l="85"
+            data-pct="0.441"
+            data-rs="641"
+            data-ra="734"
+            data-diff="-93">
+          <td>26</td>
+          <td><img src='/dirtball/logos/kc.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Kansas City Royals' /><strong>Kansas City Royals</strong></td>
+          <td>67</td>
+          <td>85</td>
+          <td>.441</td>
+          <td>25.5</td>
+          <td>641</td>
+          <td>734</td>
+          <td>-93</td>
+          <td>4-6</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="64"
+            data-l="89"
+            data-pct="0.418"
+            data-rs="649"
+            data-ra="719"
+            data-diff="-70">
+          <td>27</td>
+          <td><img src='/dirtball/logos/sf.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='San Francisco Giants' /><strong>San Francisco Giants</strong></td>
+          <td>64</td>
+          <td>89</td>
+          <td>.418</td>
+          <td>31.5</td>
+          <td>649</td>
+          <td>719</td>
+          <td>-70</td>
+          <td>5-5</td>
+          <td>W2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="61"
+            data-l="91"
+            data-pct="0.401"
+            data-rs="660"
+            data-ra="865"
+            data-diff="-205">
+          <td>28</td>
+          <td><img src='/dirtball/logos/oak.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Athletics' /><strong>Athletics</strong></td>
+          <td>61</td>
+          <td>91</td>
+          <td>.401</td>
+          <td>31.5</td>
+          <td>660</td>
+          <td>865</td>
+          <td>-205</td>
+          <td>5-5</td>
+          <td>L2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="58"
+            data-l="94"
+            data-pct="0.382"
+            data-rs="614"
+            data-ra="692"
+            data-diff="-78">
+          <td>29</td>
+          <td><img src='/dirtball/logos/laa.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Los Angeles Angels' /><strong>Los Angeles Angels</strong></td>
+          <td>58</td>
+          <td>94</td>
+          <td>.382</td>
+          <td>34.5</td>
+          <td>614</td>
+          <td>692</td>
+          <td>-78</td>
+          <td>4-6</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="56"
+            data-l="96"
+            data-pct="0.368"
+            data-rs="715"
+            data-ra="885"
+            data-diff="-170">
+          <td>30</td>
+          <td><img src='/dirtball/logos/col.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Colorado Rockies' /><strong>Colorado Rockies</strong></td>
+          <td>56</td>
+          <td>96</td>
+          <td>.368</td>
+          <td>39</td>
+          <td>715</td>
+          <td>885</td>
+          <td>-170</td>
+          <td>1-9</td>
+          <td>L1</td>
+        </tr>
+      
+      </tbody>
+      </table>
+      
+    </div>
+  
+    
+    <div class="standings-view" data-view="AL" style="display:none">
+      
+      <table class="data-table standings-table">
+      <thead>
+        <tr>
+          <th>#</th><th>Team</th><th>W</th><th>L</th><th>PCT</th><th>GB</th>
+          <th>RS</th><th>RA</th><th>Diff</th><th>L10</th><th>Streak</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        
+        <tr class="row-won"
+            data-w="92"
+            data-l="59"
+            data-pct="0.609"
+            data-rs="688"
+            data-ra="617"
+            data-diff="71">
+          <td>1</td>
+          <td><img src='/dirtball/logos/tb.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Tampa Bay Rays' /><strong>Tampa Bay Rays</strong></td>
+          <td>92</td>
+          <td>59</td>
+          <td>.609</td>
+          <td>-</td>
+          <td>688</td>
+          <td>617</td>
+          <td>+71</td>
+          <td>8-2</td>
+          <td>W5</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="88"
+            data-l="64"
+            data-pct="0.579"
+            data-rs="697"
+            data-ra="561"
+            data-diff="136">
+          <td>2</td>
+          <td><img src='/dirtball/logos/nyy.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='New York Yankees' /><strong>New York Yankees</strong></td>
+          <td>88</td>
+          <td>64</td>
+          <td>.579</td>
+          <td>4.5</td>
+          <td>697</td>
+          <td>561</td>
+          <td>+136</td>
+          <td>7-3</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="67"
+            data-l="85"
+            data-pct="0.441"
+            data-rs="641"
+            data-ra="734"
+            data-diff="-93">
+          <td>3</td>
+          <td><img src='/dirtball/logos/kc.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Kansas City Royals' /><strong>Kansas City Royals</strong></td>
+          <td>67</td>
+          <td>85</td>
+          <td>.441</td>
+          <td>25.5</td>
+          <td>641</td>
+          <td>734</td>
+          <td>-93</td>
+          <td>4-6</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="61"
+            data-l="91"
+            data-pct="0.401"
+            data-rs="660"
+            data-ra="865"
+            data-diff="-205">
+          <td>4</td>
+          <td><img src='/dirtball/logos/oak.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Athletics' /><strong>Athletics</strong></td>
+          <td>61</td>
+          <td>91</td>
+          <td>.401</td>
+          <td>31.5</td>
+          <td>660</td>
+          <td>865</td>
+          <td>-205</td>
+          <td>5-5</td>
+          <td>L2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="58"
+            data-l="94"
+            data-pct="0.382"
+            data-rs="614"
+            data-ra="692"
+            data-diff="-78">
+          <td>5</td>
+          <td><img src='/dirtball/logos/laa.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Los Angeles Angels' /><strong>Los Angeles Angels</strong></td>
+          <td>58</td>
+          <td>94</td>
+          <td>.382</td>
+          <td>34.5</td>
+          <td>614</td>
+          <td>692</td>
+          <td>-78</td>
+          <td>4-6</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="82"
+            data-l="70"
+            data-pct="0.539"
+            data-rs="668"
+            data-ra="586"
+            data-diff="82">
+          <td>6</td>
+          <td><img src='/dirtball/logos/bos.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Boston Red Sox' /><strong>Boston Red Sox</strong></td>
+          <td>82</td>
+          <td>70</td>
+          <td>.539</td>
+          <td>10.5</td>
+          <td>668</td>
+          <td>586</td>
+          <td>+82</td>
+          <td>5-5</td>
+          <td>L2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="78"
+            data-l="75"
+            data-pct="0.51"
+            data-rs="631"
+            data-ra="638"
+            data-diff="-7">
+          <td>7</td>
+          <td><img src='/dirtball/logos/cle.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Cleveland Guardians' /><strong>Cleveland Guardians</strong></td>
+          <td>78</td>
+          <td>75</td>
+          <td>.510</td>
+          <td>15</td>
+          <td>631</td>
+          <td>638</td>
+          <td>-7</td>
+          <td>6-4</td>
+          <td>W2</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="77"
+            data-l="75"
+            data-pct="0.507"
+            data-rs="711"
+            data-ra="677"
+            data-diff="34">
+          <td>8</td>
+          <td><img src='/dirtball/logos/chw.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Chicago White Sox' /><strong>Chicago White Sox</strong></td>
+          <td>77</td>
+          <td>75</td>
+          <td>.507</td>
+          <td>15.5</td>
+          <td>711</td>
+          <td>677</td>
+          <td>+34</td>
+          <td>3-7</td>
+          <td>L2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="76"
+            data-l="76"
+            data-pct="0.5"
+            data-rs="675"
+            data-ra="729"
+            data-diff="-54">
+          <td>9</td>
+          <td><img src='/dirtball/logos/hou.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Houston Astros' /><strong>Houston Astros</strong></td>
+          <td>76</td>
+          <td>76</td>
+          <td>.500</td>
+          <td>16.5</td>
+          <td>675</td>
+          <td>729</td>
+          <td>-54</td>
+          <td>3-7</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="76"
+            data-l="76"
+            data-pct="0.5"
+            data-rs="635"
+            data-ra="673"
+            data-diff="-38">
+          <td>10</td>
+          <td><img src='/dirtball/logos/tex.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Texas Rangers' /><strong>Texas Rangers</strong></td>
+          <td>76</td>
+          <td>76</td>
+          <td>.500</td>
+          <td>16.5</td>
+          <td>635</td>
+          <td>673</td>
+          <td>-38</td>
+          <td>6-4</td>
+          <td>W4</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="76"
+            data-l="77"
+            data-pct="0.497"
+            data-rs="619"
+            data-ra="656"
+            data-diff="-37">
+          <td>11</td>
+          <td><img src='/dirtball/logos/tor.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Toronto Blue Jays' /><strong>Toronto Blue Jays</strong></td>
+          <td>76</td>
+          <td>77</td>
+          <td>.497</td>
+          <td>17</td>
+          <td>619</td>
+          <td>656</td>
+          <td>-37</td>
+          <td>4-6</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="75"
+            data-l="78"
+            data-pct="0.49"
+            data-rs="688"
+            data-ra="714"
+            data-diff="-26">
+          <td>12</td>
+          <td><img src='/dirtball/logos/bal.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Baltimore Orioles' /><strong>Baltimore Orioles</strong></td>
+          <td>75</td>
+          <td>78</td>
+          <td>.490</td>
+          <td>18</td>
+          <td>688</td>
+          <td>714</td>
+          <td>-26</td>
+          <td>6-4</td>
+          <td>W3</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="72"
+            data-l="80"
+            data-pct="0.474"
+            data-rs="683"
+            data-ra="607"
+            data-diff="76">
+          <td>13</td>
+          <td><img src='/dirtball/logos/det.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Detroit Tigers' /><strong>Detroit Tigers</strong></td>
+          <td>72</td>
+          <td>80</td>
+          <td>.474</td>
+          <td>20.5</td>
+          <td>683</td>
+          <td>607</td>
+          <td>+76</td>
+          <td>7-3</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="71"
+            data-l="81"
+            data-pct="0.467"
+            data-rs="692"
+            data-ra="765"
+            data-diff="-73">
+          <td>14</td>
+          <td><img src='/dirtball/logos/min.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Minnesota Twins' /><strong>Minnesota Twins</strong></td>
+          <td>71</td>
+          <td>81</td>
+          <td>.467</td>
+          <td>21.5</td>
+          <td>692</td>
+          <td>765</td>
+          <td>-73</td>
+          <td>3-7</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="71"
+            data-l="82"
+            data-pct="0.464"
+            data-rs="624"
+            data-ra="680"
+            data-diff="-56">
+          <td>15</td>
+          <td><img src='/dirtball/logos/sea.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Seattle Mariners' /><strong>Seattle Mariners</strong></td>
+          <td>71</td>
+          <td>82</td>
+          <td>.464</td>
+          <td>22</td>
+          <td>624</td>
+          <td>680</td>
+          <td>-56</td>
+          <td>5-5</td>
+          <td>W1</td>
+        </tr>
+      
+      </tbody>
+      </table>
+      
+    </div>
+  
+    
+    <div class="standings-view" data-view="NL" style="display:none">
+      
+      <table class="data-table standings-table">
+      <thead>
+        <tr>
+          <th>#</th><th>Team</th><th>W</th><th>L</th><th>PCT</th><th>GB</th>
+          <th>RS</th><th>RA</th><th>Diff</th><th>L10</th><th>Streak</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        
+        <tr class="row-won"
+            data-w="92"
+            data-l="60"
+            data-pct="0.605"
+            data-rs="751"
+            data-ra="578"
+            data-diff="173">
+          <td>1</td>
+          <td><img src='/dirtball/logos/lad.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Los Angeles Dodgers' /><strong>Los Angeles Dodgers</strong></td>
+          <td>92</td>
+          <td>60</td>
+          <td>.605</td>
+          <td>3</td>
+          <td>751</td>
+          <td>578</td>
+          <td>+173</td>
+          <td>7-3</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="95"
+            data-l="57"
+            data-pct="0.625"
+            data-rs="788"
+            data-ra="588"
+            data-diff="200">
+          <td>2</td>
+          <td><img src='/dirtball/logos/mil.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Milwaukee Brewers' /><strong>Milwaukee Brewers</strong></td>
+          <td>95</td>
+          <td>57</td>
+          <td>.625</td>
+          <td>-</td>
+          <td>788</td>
+          <td>588</td>
+          <td>+200</td>
+          <td>7-3</td>
+          <td>W2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="71"
+            data-l="81"
+            data-pct="0.467"
+            data-rs="631"
+            data-ra="779"
+            data-diff="-148">
+          <td>3</td>
+          <td><img src='/dirtball/logos/cin.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Cincinnati Reds' /><strong>Cincinnati Reds</strong></td>
+          <td>71</td>
+          <td>81</td>
+          <td>.467</td>
+          <td>24</td>
+          <td>631</td>
+          <td>779</td>
+          <td>-148</td>
+          <td>3-7</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="71"
+            data-l="82"
+            data-pct="0.464"
+            data-rs="778"
+            data-ra="775"
+            data-diff="3">
+          <td>4</td>
+          <td><img src='/dirtball/logos/wsh.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Washington Nationals' /><strong>Washington Nationals</strong></td>
+          <td>71</td>
+          <td>82</td>
+          <td>.464</td>
+          <td>24.5</td>
+          <td>778</td>
+          <td>775</td>
+          <td>+3</td>
+          <td>4-6</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="69"
+            data-l="83"
+            data-pct="0.454"
+            data-rs="650"
+            data-ra="693"
+            data-diff="-43">
+          <td>5</td>
+          <td><img src='/dirtball/logos/nym.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='New York Mets' /><strong>New York Mets</strong></td>
+          <td>69</td>
+          <td>83</td>
+          <td>.454</td>
+          <td>26</td>
+          <td>650</td>
+          <td>693</td>
+          <td>-43</td>
+          <td>5-5</td>
+          <td>L4</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="64"
+            data-l="89"
+            data-pct="0.418"
+            data-rs="649"
+            data-ra="719"
+            data-diff="-70">
+          <td>6</td>
+          <td><img src='/dirtball/logos/sf.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='San Francisco Giants' /><strong>San Francisco Giants</strong></td>
+          <td>64</td>
+          <td>89</td>
+          <td>.418</td>
+          <td>31.5</td>
+          <td>649</td>
+          <td>719</td>
+          <td>-70</td>
+          <td>5-5</td>
+          <td>W2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="56"
+            data-l="96"
+            data-pct="0.368"
+            data-rs="715"
+            data-ra="885"
+            data-diff="-170">
+          <td>7</td>
+          <td><img src='/dirtball/logos/col.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Colorado Rockies' /><strong>Colorado Rockies</strong></td>
+          <td>56</td>
+          <td>96</td>
+          <td>.368</td>
+          <td>39</td>
+          <td>715</td>
+          <td>885</td>
+          <td>-170</td>
+          <td>1-9</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="89"
+            data-l="64"
+            data-pct="0.582"
+            data-rs="706"
+            data-ra="595"
+            data-diff="111">
+          <td>8</td>
+          <td><img src='/dirtball/logos/atl.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Atlanta Braves' /><strong>Atlanta Braves</strong></td>
+          <td>89</td>
+          <td>64</td>
+          <td>.582</td>
+          <td>6.5</td>
+          <td>706</td>
+          <td>595</td>
+          <td>+111</td>
+          <td>4-6</td>
+          <td>L1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="85"
+            data-l="68"
+            data-pct="0.556"
+            data-rs="817"
+            data-ra="674"
+            data-diff="143">
+          <td>9</td>
+          <td><img src='/dirtball/logos/chc.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Chicago Cubs' /><strong>Chicago Cubs</strong></td>
+          <td>85</td>
+          <td>68</td>
+          <td>.556</td>
+          <td>10.5</td>
+          <td>817</td>
+          <td>674</td>
+          <td>+143</td>
+          <td>4-6</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="84"
+            data-l="68"
+            data-pct="0.553"
+            data-rs="681"
+            data-ra="650"
+            data-diff="31">
+          <td>10</td>
+          <td><img src='/dirtball/logos/phi.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Philadelphia Phillies' /><strong>Philadelphia Phillies</strong></td>
+          <td>84</td>
+          <td>68</td>
+          <td>.553</td>
+          <td>11</td>
+          <td>681</td>
+          <td>650</td>
+          <td>+31</td>
+          <td>4-6</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="83"
+            data-l="69"
+            data-pct="0.546"
+            data-rs="659"
+            data-ra="636"
+            data-diff="23">
+          <td>11</td>
+          <td><img src='/dirtball/logos/sd.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='San Diego Padres' /><strong>San Diego Padres</strong></td>
+          <td>83</td>
+          <td>69</td>
+          <td>.546</td>
+          <td>12</td>
+          <td>659</td>
+          <td>636</td>
+          <td>+23</td>
+          <td>9-1</td>
+          <td>W1</td>
+        </tr>
+      
+        
+        <tr class=""
+            data-w="80"
+            data-l="73"
+            data-pct="0.523"
+            data-rs="678"
+            data-ra="678"
+            data-diff="0">
+          <td>12</td>
+          <td><img src='/dirtball/logos/ari.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Arizona Diamondbacks' /><strong>Arizona Diamondbacks</strong></td>
+          <td>80</td>
+          <td>73</td>
+          <td>.523</td>
+          <td>15.5</td>
+          <td>678</td>
+          <td>678</td>
+          <td>0</td>
+          <td>5-5</td>
+          <td>L2</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="76"
+            data-l="77"
+            data-pct="0.497"
+            data-rs="681"
+            data-ra="673"
+            data-diff="8">
+          <td>13</td>
+          <td><img src='/dirtball/logos/mia.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Miami Marlins' /><strong>Miami Marlins</strong></td>
+          <td>76</td>
+          <td>77</td>
+          <td>.497</td>
+          <td>19.5</td>
+          <td>681</td>
+          <td>673</td>
+          <td>+8</td>
+          <td>5-5</td>
+          <td>W2</td>
+        </tr>
+      
+        
+        <tr class="row-won"
+            data-w="75"
+            data-l="77"
+            data-pct="0.493"
+            data-rs="723"
+            data-ra="702"
+            data-diff="21">
+          <td>14</td>
+          <td><img src='/dirtball/logos/pit.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Pittsburgh Pirates' /><strong>Pittsburgh Pirates</strong></td>
+          <td>75</td>
+          <td>77</td>
+          <td>.493</td>
+          <td>20</td>
+          <td>723</td>
+          <td>702</td>
+          <td>+21</td>
+          <td>5-5</td>
+          <td>L2</td>
+        </tr>
+      
+        
+        <tr class="row-lost"
+            data-w="75"
+            data-l="78"
+            data-pct="0.49"
+            data-rs="693"
+            data-ra="707"
+            data-diff="-14">
+          <td>15</td>
+          <td><img src='/dirtball/logos/stl.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='St. Louis Cardinals' /><strong>St. Louis Cardinals</strong></td>
+          <td>75</td>
+          <td>78</td>
+          <td>.490</td>
+          <td>20.5</td>
+          <td>693</td>
+          <td>707</td>
+          <td>-14</td>
+          <td>4-6</td>
+          <td>L2</td>
+        </tr>
+      
+      </tbody>
+      </table>
+      
+    </div>
+  
+
+
+    </main>
+
+    <footer class="footer">
+        <p>Gimme Rubies &mdash; Educational/demotivational baseball betting tracker. <em>The house always wins.</em></p>
+    </footer>
+
+    <script src="/dirtball/app.js"></script>
+    <script src="/dirtball/site.js"></script>
+</body>
+</html>
