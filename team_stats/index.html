@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var view = match ? match[1] : 'wins';
     var sortKey = {wins: 'wins', losses: 'losses', runs_scored: 'total_runs', runs_allowed: 'total_opp'}[view] || 'wins';
 
-    fetch(window.SITE_BASE + 'api/team_stats_data')
+    fetch(window.SITE_BASE + 'api/team_stats_data.json')
         .then(function(r) { return r.json(); })
         .then(function(data) {
             var teams = Object.keys(data).map(function(name) {

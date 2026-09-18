@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimme Rubies — Team Stats</title>
+    <link rel="stylesheet" href="/dirtball/style.css">
+    <script src="/dirtball/chart.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="/dirtball/">&#9918; Gimme Rubies</a>
+            <span class="nav-subtitle">See how much you'd lose over time</span>
+        </div>
+        <div class="nav-links">
+            <a href="/dirtball/" class="">Home</a>
+            
+            <a href="/dirtball/scores" class="">Scores</a>
+            <a href="/dirtball/team_stats" class="active">Team Stats</a>
+            
+            <a href="/dirtball/predictions" class="nav-highlight ">Predictions</a>
+            <a href="/dirtball/standings" class="">Standings</a>
+            
+        </div>
+    </nav>
+
+    <main class="container">
+        
+
+        <h1>Team Stats</h1>
+
+<div class="filter-bar">
+    
+        <label>View:
+            <select id="team-view">
+                <option value="" disabled selected>Team Detail</option>
+                <option value="wins" >Most Wins</option>
+                <option value="losses" >Most Losses</option>
+                <option value="runs_scored" >Most Runs Scored</option>
+                <option value="runs_allowed" >Most Runs Allowed</option>
+            </select>
+        </label>
+        
+        <label>Team:
+            <select id="team-select">
+                <option value="">Go to team page&hellip;</option>
+                
+                <option value="American All-Stars" >American All-Stars</option>
+                
+                <option value="Arizona Diamondbacks" >Arizona Diamondbacks</option>
+                
+                <option value="Athletics" >Athletics</option>
+                
+                <option value="Atlanta Braves" >Atlanta Braves</option>
+                
+                <option value="Baltimore Orioles" >Baltimore Orioles</option>
+                
+                <option value="Boston Red Sox" >Boston Red Sox</option>
+                
+                <option value="Chicago Cubs" >Chicago Cubs</option>
+                
+                <option value="Chicago White Sox" >Chicago White Sox</option>
+                
+                <option value="Cincinnati Reds" >Cincinnati Reds</option>
+                
+                <option value="Cleveland Guardians" >Cleveland Guardians</option>
+                
+                <option value="Colorado Rockies" >Colorado Rockies</option>
+                
+                <option value="Detroit Tigers" >Detroit Tigers</option>
+                
+                <option value="Houston Astros" >Houston Astros</option>
+                
+                <option value="Kansas City Royals" >Kansas City Royals</option>
+                
+                <option value="Los Angeles Angels" >Los Angeles Angels</option>
+                
+                <option value="Los Angeles Dodgers" >Los Angeles Dodgers</option>
+                
+                <option value="Miami Marlins" >Miami Marlins</option>
+                
+                <option value="Milwaukee Brewers" >Milwaukee Brewers</option>
+                
+                <option value="Minnesota Twins" >Minnesota Twins</option>
+                
+                <option value="National All-Stars" selected>National All-Stars</option>
+                
+                <option value="New York Mets" >New York Mets</option>
+                
+                <option value="New York Yankees" >New York Yankees</option>
+                
+                <option value="Philadelphia Phillies" >Philadelphia Phillies</option>
+                
+                <option value="Pittsburgh Pirates" >Pittsburgh Pirates</option>
+                
+                <option value="San Diego Padres" >San Diego Padres</option>
+                
+                <option value="San Francisco Giants" >San Francisco Giants</option>
+                
+                <option value="Seattle Mariners" >Seattle Mariners</option>
+                
+                <option value="St. Louis Cardinals" >St. Louis Cardinals</option>
+                
+                <option value="Tampa Bay Rays" >Tampa Bay Rays</option>
+                
+                <option value="Texas Rangers" >Texas Rangers</option>
+                
+                <option value="Toronto Blue Jays" >Toronto Blue Jays</option>
+                
+                <option value="Washington Nationals" >Washington Nationals</option>
+                
+            </select>
+        </label>
+        
+    
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var viewSel = document.getElementById('team-view');
+    var teamSel = document.getElementById('team-select');
+    if (viewSel) {
+        viewSel.addEventListener('change', function() {
+            location.href = window.SITE_BASE + 'team_stats/#view=' + viewSel.value;
+        });
+    }
+    if (teamSel) {
+        teamSel.addEventListener('change', function() {
+            if (teamSel.value) {
+                location.href = window.SITE_BASE + 'team_stats/' + encodeURIComponent(teamSel.value) + '/';
+            }
+        });
+    }
+});
+</script>
+
+
+<div class="team-header">
+    <span style='font-size:48px;vertical-align:middle;'>&#9918;</span>
+    <h2>National All-Stars</h2>
+</div>
+
+<div class="stats-cards">
+    <div class="stat-card"><div class="stat-value">1</div><div class="stat-label">Games</div></div>
+    <div class="stat-card"><div class="stat-value">0-1</div><div class="stat-label">W-L (0.0%)</div></div>
+    <div class="stat-card"><div class="stat-value">0-1</div><div class="stat-label">Home</div></div>
+    <div class="stat-card"><div class="stat-value">0-0</div><div class="stat-label">Away</div></div>
+    <div class="stat-card"><div class="stat-value" style="letter-spacing:2px;font-family:monospace;">L</div><div class="stat-label">Form (last 5)</div></div>
+    <div class="stat-card"><div class="stat-value">0.0</div><div class="stat-label">Runs/Game (vs 4.0 allowed)</div></div>
+    <div class="stat-card stat-negative"><div class="stat-value">-4</div><div class="stat-label">Run Diff</div></div>
+</div>
+
+<hr>
+<h2>Season Form</h2>
+<div class="chart-container" style="height: 220px; margin-bottom: 1.5rem;">
+    <canvas id="form-chart"></canvas>
+</div>
+
+<hr>
+<h2>Recent Results</h2>
+
+<table class="data-table">
+<thead><tr><th>Date (CET)</th><th>Loc</th><th>Opponent</th><th>Score</th><th>Diff</th><th>Status</th></tr></thead>
+<tbody>
+<tr class="row-lost">
+    <td>15 Jul 02:00</td>
+    <td>Home</td>
+    <td><span style='font-size:20px;vertical-align:middle;'>&#9918;</span>American All-Stars</td>
+    <td>0 &ndash; 4</td>
+    <td>-4</td>
+    <td>Unknown</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+<div class="charts-row">
+    <div class="chart-half">
+        <h2>Record by Location</h2>
+        <div class="chart-container chart-small"><canvas id="location-chart"></canvas></div>
+    </div>
+    <div class="chart-half">
+        <h2>Win/Loss by Favorite Status</h2>
+        <div class="chart-container chart-small"><canvas id="fav-chart"></canvas></div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var formCtx = document.getElementById('form-chart');
+    if (formCtx) {
+        var formGames = [{"date":"2026-07-15T00:00Z","won":false,"rd":-4,"opp":"American All-Stars","score":"0-4","home":true}];
+        new Chart(formCtx, {
+            type: 'bar',
+            data: {
+                labels: formGames.map(function(g, i) { return 'G' + (i + 1); }),
+                datasets: [{
+                    data: formGames.map(function(g) { return g.won ? g.rd : g.rd; }),
+                    backgroundColor: formGames.map(function(g) { return g.won ? '#28a745' : '#dc3545'; }),
+                    borderRadius: 2,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            title: function(items) {
+                                var g = formGames[items[0].dataIndex];
+                                return g.opp;
+                            },
+                            label: function(item) {
+                                var g = formGames[item.dataIndex];
+                                var result = g.won ? 'WIN' : 'LOSS';
+                                var loc = g.home ? 'Home' : 'Away';
+                                return result + ' ' + g.score + ' (' + loc + ', RD ' + (g.rd > 0 ? '+' : '') + g.rd + ')';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: { display: true, text: 'Games (oldest → newest)' },
+                        grid: { display: false },
+                        ticks: {
+                            maxRotation: 0,
+                            autoSkip: true,
+                            maxTicksLimit: 20,
+                        }
+                    },
+                    y: {
+                        title: { display: true, text: 'Run Differential' },
+                        grid: { color: '#e0e0e0' },
+                        beginAtZero: true,
+                    }
+                },
+                onClick: function(e, elements) {
+                    if (elements.length > 0) {
+                        var g = formGames[elements[0].index];
+                        var result = g.won ? 'WIN' : 'LOSS';
+                        alert(result + ' vs ' + g.opp + '\nScore: ' + g.score + '\nLocation: ' + (g.home ? 'Home' : 'Away') + '\nRun Diff: ' + (g.rd > 0 ? '+' : '') + g.rd);
+                    }
+                }
+            }
+        });
+    }
+
+    var locCtx = document.getElementById('location-chart');
+    if (locCtx) {
+        new Chart(locCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Home', 'Away'],
+                datasets: [
+                    { label: 'Wins', data: [0, 0], backgroundColor: '#28a745' },
+                    { label: 'Losses', data: [1, 0], backgroundColor: '#dc3545' }
+                ]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+    }
+    var favCtx = document.getElementById('fav-chart');
+    if (favCtx) {
+        new Chart(favCtx, {
+            type: 'bar',
+            data: {
+                labels: ['As Favorite', 'As Underdog'],
+                datasets: [
+                    { label: 'Wins', data: [0, 0], backgroundColor: '#28a745' },
+                    { label: 'Losses', data: [0, 0], backgroundColor: '#dc3545' }
+                ]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+    }
+});
+</script>
+
+
+    </main>
+
+    <footer class="footer">
+        <p>Gimme Rubies &mdash; Educational/demotivational baseball betting tracker. <em>The house always wins.</em></p>
+    </footer>
+
+    <script src="/dirtball/app.js"></script>
+    <script src="/dirtball/site.js"></script>
+</body>
+</html>
