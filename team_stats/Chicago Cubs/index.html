@@ -142,13 +142,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="stats-cards">
-    <div class="stat-card"><div class="stat-value">153</div><div class="stat-label">Games</div></div>
-    <div class="stat-card"><div class="stat-value">85-68</div><div class="stat-label">W-L (55.6%)</div></div>
+    <div class="stat-card"><div class="stat-value">155</div><div class="stat-label">Games</div></div>
+    <div class="stat-card"><div class="stat-value">86-69</div><div class="stat-label">W-L (55.5%)</div></div>
     <div class="stat-card"><div class="stat-value">45-33</div><div class="stat-label">Home</div></div>
-    <div class="stat-card"><div class="stat-value">40-35</div><div class="stat-label">Away</div></div>
+    <div class="stat-card"><div class="stat-value">41-36</div><div class="stat-label">Away</div></div>
     <div class="stat-card"><div class="stat-value" style="letter-spacing:2px;font-family:monospace;">WLWLW</div><div class="stat-label">Form (last 5)</div></div>
     <div class="stat-card"><div class="stat-value">5.3</div><div class="stat-label">Runs/Game (vs 4.4 allowed)</div></div>
-    <div class="stat-card stat-positive"><div class="stat-value">+143</div><div class="stat-label">Run Diff</div></div>
+    <div class="stat-card stat-positive"><div class="stat-value">+144</div><div class="stat-label">Run Diff</div></div>
 </div>
 
 <hr>
@@ -163,6 +163,22 @@ document.addEventListener('DOMContentLoaded', function() {
 <table class="data-table">
 <thead><tr><th>Date (CET)</th><th>Loc</th><th>Opponent</th><th>Score</th><th>Diff</th><th>Status</th></tr></thead>
 <tbody>
+<tr class="row-won">
+    <td>20 Sep 00:41</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/cin.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Cincinnati Reds' />Cincinnati Reds</td>
+    <td>5 &ndash; 2</td>
+    <td>+3</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-lost">
+    <td>19 Sep 00:41</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/cin.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Cincinnati Reds' />Cincinnati Reds</td>
+    <td>4 &ndash; 6</td>
+    <td>-2</td>
+    <td>Favorite</td>
+</tr>
 <tr class="row-won">
     <td>17 Sep 01:41</td>
     <td>Home</td>
@@ -267,22 +283,6 @@ document.addEventListener('DOMContentLoaded', function() {
     <td>+1</td>
     <td>Underdog</td>
 </tr>
-<tr class="row-lost">
-    <td>03 Sep 01:41</td>
-    <td>Home</td>
-    <td><img src='/dirtball/logos/mil.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Milwaukee Brewers' />Milwaukee Brewers</td>
-    <td>5 &ndash; 9</td>
-    <td>-4</td>
-    <td>Underdog</td>
-</tr>
-<tr class="row-lost">
-    <td>02 Sep 01:41</td>
-    <td>Home</td>
-    <td><img src='/dirtball/logos/mil.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Milwaukee Brewers' />Milwaukee Brewers</td>
-    <td>4 &ndash; 9</td>
-    <td>-5</td>
-    <td>Favorite</td>
-</tr>
 </tbody>
 </table>
 
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     var formCtx = document.getElementById('form-chart');
     if (formCtx) {
-        var formGames = [{"date":"2026-07-25T22:40Z","won":true,"rd":11,"opp":"Pittsburgh Pirates","score":"11-0","home":false},{"date":"2026-07-26T17:35Z","won":false,"rd":-1,"opp":"Pittsburgh Pirates","score":"7-8","home":false},{"date":"2026-07-27T23:46:00Z","won":true,"rd":4,"opp":"St. Louis Cardinals","score":"7-3","home":false},{"date":"2026-07-28T23:46:00Z","won":true,"rd":8,"opp":"St. Louis Cardinals","score":"10-2","home":false},{"date":"2026-07-29T23:46:00Z","won":false,"rd":-1,"opp":"St. Louis Cardinals","score":"2-3","home":false},{"date":"2026-07-30T18:16:00Z","won":true,"rd":2,"opp":"St. Louis Cardinals","score":"4-2","home":false},{"date":"2026-07-31T18:21:00Z","won":false,"rd":-2,"opp":"New York Yankees","score":"0-2","home":true},{"date":"2026-08-01T23:16:00Z","won":true,"rd":3,"opp":"New York Yankees","score":"5-2","home":true},{"date":"2026-08-02T18:20Z","won":false,"rd":-1,"opp":"New York Yankees","score":"1-2","home":true},{"date":"2026-08-04T00:06:00Z","won":true,"rd":5,"opp":"Los Angeles Dodgers","score":"10-5","home":true},{"date":"2026-08-05T00:06:00Z","won":true,"rd":4,"opp":"Los Angeles Dodgers","score":"5-1","home":true},{"date":"2026-08-05T18:21:00Z","won":true,"rd":1,"opp":"Los Angeles Dodgers","score":"7-6","home":true},{"date":"2026-08-06T18:21:00Z","won":true,"rd":1,"opp":"Toronto Blue Jays","score":"3-2","home":true},{"date":"2026-08-08T00:11:00Z","won":true,"rd":2,"opp":"Kansas City Royals","score":"6-4","home":false},{"date":"2026-08-08T23:10:00Z","won":false,"rd":-3,"opp":"Kansas City Royals","score":"3-6","home":false},{"date":"2026-08-09T18:10Z","won":true,"rd":8,"opp":"Kansas City Royals","score":"10-2","home":false},{"date":"2026-08-11T22:46:00Z","won":true,"rd":2,"opp":"Washington Nationals","score":"8-6","home":false},{"date":"2026-08-12T22:45:00Z","won":true,"rd":6,"opp":"Washington Nationals","score":"12-6","home":false},{"date":"2026-08-13T20:06:00Z","won":false,"rd":-7,"opp":"Washington Nationals","score":"0-7","home":false},{"date":"2026-08-14T18:20:00Z","won":true,"rd":3,"opp":"St. Louis Cardinals","score":"3-0","home":true},{"date":"2026-08-15T18:21:00Z","won":false,"rd":-4,"opp":"St. Louis Cardinals","score":"4-8","home":true},{"date":"2026-08-16T19:00Z","won":false,"rd":-7,"opp":"St. Louis Cardinals","score":"4-11","home":true},{"date":"2026-08-18T00:06:00Z","won":true,"rd":2,"opp":"Chicago White Sox","score":"7-5","home":true},{"date":"2026-08-19T00:06:00Z","won":true,"rd":1,"opp":"Chicago White Sox","score":"4-3","home":true},{"date":"2026-08-19T18:21:00Z","won":false,"rd":-3,"opp":"Chicago White Sox","score":"0-3","home":true},{"date":"2026-08-22T02:11:00Z","won":false,"rd":-1,"opp":"Seattle Mariners","score":"5-6","home":false},{"date":"2026-08-22T23:15Z","won":false,"rd":-1,"opp":"Seattle Mariners","score":"4-5","home":false},{"date":"2026-08-23T20:10Z","won":true,"rd":17,"opp":"Seattle Mariners","score":"19-2","home":false},{"date":"2026-08-25T01:40:00Z","won":true,"rd":7,"opp":"Arizona Diamondbacks","score":"7-0","home":false},{"date":"2026-08-26T01:40:00Z","won":false,"rd":-1,"opp":"Arizona Diamondbacks","score":"4-5","home":false},{"date":"2026-08-26T19:41:00Z","won":false,"rd":-2,"opp":"Arizona Diamondbacks","score":"0-2","home":false},{"date":"2026-08-28T18:21:00Z","won":false,"rd":-2,"opp":"Cincinnati Reds","score":"8-10","home":true},{"date":"2026-08-29T18:21:00Z","won":true,"rd":12,"opp":"Cincinnati Reds","score":"17-5","home":true},{"date":"2026-08-30T23:20Z","won":false,"rd":-2,"opp":"Cincinnati Reds","score":"5-7","home":true},{"date":"2026-08-31T23:41:00Z","won":true,"rd":14,"opp":"Milwaukee Brewers","score":"17-3","home":true},{"date":"2026-09-01T23:41:00Z","won":false,"rd":-5,"opp":"Milwaukee Brewers","score":"4-9","home":true},{"date":"2026-09-02T23:41:00Z","won":false,"rd":-4,"opp":"Milwaukee Brewers","score":"5-9","home":true},{"date":"2026-09-03T23:15:00Z","won":true,"rd":1,"opp":"Milwaukee Brewers","score":"2-1","home":true},{"date":"2026-09-04T23:10:00Z","won":true,"rd":5,"opp":"Miami Marlins","score":"6-1","home":false},{"date":"2026-09-05T20:11:00Z","won":true,"rd":1,"opp":"Miami Marlins","score":"6-5","home":false},{"date":"2026-09-06T17:41:00Z","won":false,"rd":-7,"opp":"Miami Marlins","score":"3-10","home":false},{"date":"2026-09-07T18:11:00Z","won":false,"rd":-1,"opp":"Milwaukee Brewers","score":"3-4","home":false},{"date":"2026-09-08T23:41:00Z","won":false,"rd":-1,"opp":"Milwaukee Brewers","score":"3-4","home":false},{"date":"2026-09-09T23:41:00Z","won":false,"rd":-2,"opp":"Milwaukee Brewers","score":"6-8","home":false},{"date":"2026-09-11T18:21:00Z","won":true,"rd":10,"opp":"Pittsburgh Pirates","score":"12-2","home":true},{"date":"2026-09-12T18:21:00Z","won":true,"rd":1,"opp":"Pittsburgh Pirates","score":"4-3","home":true},{"date":"2026-09-13T18:20Z","won":false,"rd":-1,"opp":"Pittsburgh Pirates","score":"3-4","home":true},{"date":"2026-09-14T23:41:00Z","won":true,"rd":4,"opp":"Atlanta Braves","score":"7-3","home":true},{"date":"2026-09-15T23:40:00Z","won":false,"rd":-3,"opp":"Atlanta Braves","score":"3-6","home":true},{"date":"2026-09-16T23:41:00Z","won":true,"rd":4,"opp":"Atlanta Braves","score":"8-4","home":true}];
+        var formGames = [{"date":"2026-07-27T23:46:00Z","won":true,"rd":4,"opp":"St. Louis Cardinals","score":"7-3","home":false},{"date":"2026-07-28T23:46:00Z","won":true,"rd":8,"opp":"St. Louis Cardinals","score":"10-2","home":false},{"date":"2026-07-29T23:46:00Z","won":false,"rd":-1,"opp":"St. Louis Cardinals","score":"2-3","home":false},{"date":"2026-07-30T18:16:00Z","won":true,"rd":2,"opp":"St. Louis Cardinals","score":"4-2","home":false},{"date":"2026-07-31T18:21:00Z","won":false,"rd":-2,"opp":"New York Yankees","score":"0-2","home":true},{"date":"2026-08-01T23:16:00Z","won":true,"rd":3,"opp":"New York Yankees","score":"5-2","home":true},{"date":"2026-08-02T18:20Z","won":false,"rd":-1,"opp":"New York Yankees","score":"1-2","home":true},{"date":"2026-08-04T00:06:00Z","won":true,"rd":5,"opp":"Los Angeles Dodgers","score":"10-5","home":true},{"date":"2026-08-05T00:06:00Z","won":true,"rd":4,"opp":"Los Angeles Dodgers","score":"5-1","home":true},{"date":"2026-08-05T18:21:00Z","won":true,"rd":1,"opp":"Los Angeles Dodgers","score":"7-6","home":true},{"date":"2026-08-06T18:21:00Z","won":true,"rd":1,"opp":"Toronto Blue Jays","score":"3-2","home":true},{"date":"2026-08-08T00:11:00Z","won":true,"rd":2,"opp":"Kansas City Royals","score":"6-4","home":false},{"date":"2026-08-08T23:10:00Z","won":false,"rd":-3,"opp":"Kansas City Royals","score":"3-6","home":false},{"date":"2026-08-09T18:10Z","won":true,"rd":8,"opp":"Kansas City Royals","score":"10-2","home":false},{"date":"2026-08-11T22:46:00Z","won":true,"rd":2,"opp":"Washington Nationals","score":"8-6","home":false},{"date":"2026-08-12T22:45:00Z","won":true,"rd":6,"opp":"Washington Nationals","score":"12-6","home":false},{"date":"2026-08-13T20:06:00Z","won":false,"rd":-7,"opp":"Washington Nationals","score":"0-7","home":false},{"date":"2026-08-14T18:20:00Z","won":true,"rd":3,"opp":"St. Louis Cardinals","score":"3-0","home":true},{"date":"2026-08-15T18:21:00Z","won":false,"rd":-4,"opp":"St. Louis Cardinals","score":"4-8","home":true},{"date":"2026-08-16T19:00Z","won":false,"rd":-7,"opp":"St. Louis Cardinals","score":"4-11","home":true},{"date":"2026-08-18T00:06:00Z","won":true,"rd":2,"opp":"Chicago White Sox","score":"7-5","home":true},{"date":"2026-08-19T00:06:00Z","won":true,"rd":1,"opp":"Chicago White Sox","score":"4-3","home":true},{"date":"2026-08-19T18:21:00Z","won":false,"rd":-3,"opp":"Chicago White Sox","score":"0-3","home":true},{"date":"2026-08-22T02:11:00Z","won":false,"rd":-1,"opp":"Seattle Mariners","score":"5-6","home":false},{"date":"2026-08-22T23:15Z","won":false,"rd":-1,"opp":"Seattle Mariners","score":"4-5","home":false},{"date":"2026-08-23T20:10Z","won":true,"rd":17,"opp":"Seattle Mariners","score":"19-2","home":false},{"date":"2026-08-25T01:40:00Z","won":true,"rd":7,"opp":"Arizona Diamondbacks","score":"7-0","home":false},{"date":"2026-08-26T01:40:00Z","won":false,"rd":-1,"opp":"Arizona Diamondbacks","score":"4-5","home":false},{"date":"2026-08-26T19:41:00Z","won":false,"rd":-2,"opp":"Arizona Diamondbacks","score":"0-2","home":false},{"date":"2026-08-28T18:21:00Z","won":false,"rd":-2,"opp":"Cincinnati Reds","score":"8-10","home":true},{"date":"2026-08-29T18:21:00Z","won":true,"rd":12,"opp":"Cincinnati Reds","score":"17-5","home":true},{"date":"2026-08-30T23:20Z","won":false,"rd":-2,"opp":"Cincinnati Reds","score":"5-7","home":true},{"date":"2026-08-31T23:41:00Z","won":true,"rd":14,"opp":"Milwaukee Brewers","score":"17-3","home":true},{"date":"2026-09-01T23:41:00Z","won":false,"rd":-5,"opp":"Milwaukee Brewers","score":"4-9","home":true},{"date":"2026-09-02T23:41:00Z","won":false,"rd":-4,"opp":"Milwaukee Brewers","score":"5-9","home":true},{"date":"2026-09-03T23:15:00Z","won":true,"rd":1,"opp":"Milwaukee Brewers","score":"2-1","home":true},{"date":"2026-09-04T23:10:00Z","won":true,"rd":5,"opp":"Miami Marlins","score":"6-1","home":false},{"date":"2026-09-05T20:11:00Z","won":true,"rd":1,"opp":"Miami Marlins","score":"6-5","home":false},{"date":"2026-09-06T17:41:00Z","won":false,"rd":-7,"opp":"Miami Marlins","score":"3-10","home":false},{"date":"2026-09-07T18:11:00Z","won":false,"rd":-1,"opp":"Milwaukee Brewers","score":"3-4","home":false},{"date":"2026-09-08T23:41:00Z","won":false,"rd":-1,"opp":"Milwaukee Brewers","score":"3-4","home":false},{"date":"2026-09-09T23:41:00Z","won":false,"rd":-2,"opp":"Milwaukee Brewers","score":"6-8","home":false},{"date":"2026-09-11T18:21:00Z","won":true,"rd":10,"opp":"Pittsburgh Pirates","score":"12-2","home":true},{"date":"2026-09-12T18:21:00Z","won":true,"rd":1,"opp":"Pittsburgh Pirates","score":"4-3","home":true},{"date":"2026-09-13T18:20Z","won":false,"rd":-1,"opp":"Pittsburgh Pirates","score":"3-4","home":true},{"date":"2026-09-14T23:41:00Z","won":true,"rd":4,"opp":"Atlanta Braves","score":"7-3","home":true},{"date":"2026-09-15T23:40:00Z","won":false,"rd":-3,"opp":"Atlanta Braves","score":"3-6","home":true},{"date":"2026-09-16T23:41:00Z","won":true,"rd":4,"opp":"Atlanta Braves","score":"8-4","home":true},{"date":"2026-09-18T22:41:00Z","won":false,"rd":-2,"opp":"Cincinnati Reds","score":"4-6","home":false},{"date":"2026-09-19T22:41:00Z","won":true,"rd":3,"opp":"Cincinnati Reds","score":"5-2","home":false}];
         new Chart(formCtx, {
             type: 'bar',
             data: {
@@ -368,8 +368,8 @@ document.addEventListener('DOMContentLoaded', function() {
             data: {
                 labels: ['Home', 'Away'],
                 datasets: [
-                    { label: 'Wins', data: [45, 40], backgroundColor: '#28a745' },
-                    { label: 'Losses', data: [33, 35], backgroundColor: '#dc3545' }
+                    { label: 'Wins', data: [45, 41], backgroundColor: '#28a745' },
+                    { label: 'Losses', data: [33, 36], backgroundColor: '#dc3545' }
                 ]
             },
             options: { responsive: true, maintainAspectRatio: false }
@@ -382,8 +382,8 @@ document.addEventListener('DOMContentLoaded', function() {
             data: {
                 labels: ['As Favorite', 'As Underdog'],
                 datasets: [
-                    { label: 'Wins', data: [44, 16], backgroundColor: '#28a745' },
-                    { label: 'Losses', data: [36, 12], backgroundColor: '#dc3545' }
+                    { label: 'Wins', data: [45, 16], backgroundColor: '#28a745' },
+                    { label: 'Losses', data: [37, 12], backgroundColor: '#dc3545' }
                 ]
             },
             options: { responsive: true, maintainAspectRatio: false }
