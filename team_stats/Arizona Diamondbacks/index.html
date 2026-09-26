@@ -142,13 +142,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="stats-cards">
-    <div class="stat-card"><div class="stat-value">156</div><div class="stat-label">Games</div></div>
-    <div class="stat-card"><div class="stat-value">82-74</div><div class="stat-label">W-L (52.6%)</div></div>
+    <div class="stat-card"><div class="stat-value">160</div><div class="stat-label">Games</div></div>
+    <div class="stat-card"><div class="stat-value">86-74</div><div class="stat-label">W-L (53.8%)</div></div>
     <div class="stat-card"><div class="stat-value">45-36</div><div class="stat-label">Home</div></div>
-    <div class="stat-card"><div class="stat-value">37-38</div><div class="stat-label">Away</div></div>
-    <div class="stat-card"><div class="stat-value" style="letter-spacing:2px;font-family:monospace;">LLLWW</div><div class="stat-label">Form (last 5)</div></div>
-    <div class="stat-card"><div class="stat-value">4.4</div><div class="stat-label">Runs/Game (vs 4.4 allowed)</div></div>
-    <div class="stat-card stat-negative"><div class="stat-value">-1</div><div class="stat-label">Run Diff</div></div>
+    <div class="stat-card"><div class="stat-value">41-38</div><div class="stat-label">Away</div></div>
+    <div class="stat-card"><div class="stat-value" style="letter-spacing:2px;font-family:monospace;">WWWWW</div><div class="stat-label">Form (last 5)</div></div>
+    <div class="stat-card"><div class="stat-value">4.6</div><div class="stat-label">Runs/Game (vs 4.4 allowed)</div></div>
+    <div class="stat-card stat-positive"><div class="stat-value">+17</div><div class="stat-label">Run Diff</div></div>
 </div>
 
 <hr>
@@ -163,6 +163,38 @@ document.addEventListener('DOMContentLoaded', function() {
 <table class="data-table">
 <thead><tr><th>Date (CET)</th><th>Loc</th><th>Opponent</th><th>Score</th><th>Diff</th><th>Status</th></tr></thead>
 <tbody>
+<tr class="row-won">
+    <td>26 Sep 03:41</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/sd.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='San Diego Padres' />San Diego Padres</td>
+    <td>11 &ndash; 4</td>
+    <td>+7</td>
+    <td>Underdog</td>
+</tr>
+<tr class="row-won">
+    <td>24 Sep 21:11</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/col.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Colorado Rockies' />Colorado Rockies</td>
+    <td>12 &ndash; 8</td>
+    <td>+4</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-won">
+    <td>24 Sep 02:41</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/col.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Colorado Rockies' />Colorado Rockies</td>
+    <td>5 &ndash; 3</td>
+    <td>+2</td>
+    <td>Favorite</td>
+</tr>
+<tr class="row-won">
+    <td>23 Sep 02:41</td>
+    <td>Away</td>
+    <td><img src='/dirtball/logos/col.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Colorado Rockies' />Colorado Rockies</td>
+    <td>7 &ndash; 2</td>
+    <td>+5</td>
+    <td>Favorite</td>
+</tr>
 <tr class="row-won">
     <td>20 Sep 22:11</td>
     <td>Home</td>
@@ -251,38 +283,6 @@ document.addEventListener('DOMContentLoaded', function() {
     <td>+2</td>
     <td>Favorite</td>
 </tr>
-<tr class="row-won">
-    <td>07 Sep 20:11</td>
-    <td>Away</td>
-    <td><img src='/dirtball/logos/kc.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Kansas City Royals' />Kansas City Royals</td>
-    <td>5 &ndash; 4</td>
-    <td>+1</td>
-    <td>Underdog</td>
-</tr>
-<tr class="row-won">
-    <td>06 Sep 20:10</td>
-    <td>Away</td>
-    <td><img src='/dirtball/logos/hou.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Houston Astros' />Houston Astros</td>
-    <td>3 &ndash; 2</td>
-    <td>+1</td>
-    <td>Underdog</td>
-</tr>
-<tr class="row-won">
-    <td>06 Sep 01:16</td>
-    <td>Away</td>
-    <td><img src='/dirtball/logos/hou.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Houston Astros' />Houston Astros</td>
-    <td>4 &ndash; 3</td>
-    <td>+1</td>
-    <td>Underdog</td>
-</tr>
-<tr class="row-lost">
-    <td>05 Sep 02:11</td>
-    <td>Away</td>
-    <td><img src='/dirtball/logos/hou.png' width='20' height='20' style='vertical-align:middle;margin-right:4px;border-radius:3px;' alt='Houston Astros' />Houston Astros</td>
-    <td>1 &ndash; 3</td>
-    <td>-2</td>
-    <td>Underdog</td>
-</tr>
 </tbody>
 </table>
 
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     var formCtx = document.getElementById('form-chart');
     if (formCtx) {
-        var formGames = [{"date":"2026-07-27T22:40:00Z","won":false,"rd":-1,"opp":"Pittsburgh Pirates","score":"2-3","home":false},{"date":"2026-07-28T22:41:00Z","won":true,"rd":1,"opp":"Pittsburgh Pirates","score":"8-7","home":false},{"date":"2026-07-29T16:36:00Z","won":true,"rd":3,"opp":"Pittsburgh Pirates","score":"3-0","home":false},{"date":"2026-07-31T23:11:00Z","won":true,"rd":3,"opp":"Cleveland Guardians","score":"4-1","home":false},{"date":"2026-08-01T23:16:00Z","won":true,"rd":4,"opp":"Cleveland Guardians","score":"12-8","home":false},{"date":"2026-08-02T17:40Z","won":false,"rd":-5,"opp":"Cleveland Guardians","score":"0-5","home":false},{"date":"2026-08-04T01:41:00Z","won":true,"rd":4,"opp":"San Diego Padres","score":"5-1","home":true},{"date":"2026-08-05T01:41:00Z","won":false,"rd":-5,"opp":"San Diego Padres","score":"4-9","home":true},{"date":"2026-08-06T01:41:00Z","won":true,"rd":6,"opp":"San Diego Padres","score":"10-4","home":true},{"date":"2026-08-07T01:41:00Z","won":false,"rd":-4,"opp":"San Diego Padres","score":"1-5","home":true},{"date":"2026-08-08T01:41:00Z","won":true,"rd":1,"opp":"Los Angeles Dodgers","score":"4-3","home":true},{"date":"2026-08-09T00:11:00Z","won":false,"rd":-1,"opp":"Los Angeles Dodgers","score":"1-2","home":true},{"date":"2026-08-09T20:10Z","won":true,"rd":2,"opp":"Los Angeles Dodgers","score":"4-2","home":true},{"date":"2026-08-11T01:40:00Z","won":true,"rd":9,"opp":"Colorado Rockies","score":"9-0","home":true},{"date":"2026-08-12T01:41:00Z","won":false,"rd":-1,"opp":"Colorado Rockies","score":"2-3","home":true},{"date":"2026-08-12T19:40:00Z","won":false,"rd":-2,"opp":"Colorado Rockies","score":"4-6","home":true},{"date":"2026-08-14T23:16:00Z","won":true,"rd":2,"opp":"Atlanta Braves","score":"2-0","home":false},{"date":"2026-08-15T23:15:00Z","won":true,"rd":7,"opp":"Atlanta Braves","score":"10-3","home":false},{"date":"2026-08-16T17:35Z","won":false,"rd":-2,"opp":"Atlanta Braves","score":"3-5","home":false},{"date":"2026-08-17T23:11:00Z","won":false,"rd":-10,"opp":"Boston Red Sox","score":"1-11","home":false},{"date":"2026-08-18T23:11:00Z","won":false,"rd":-5,"opp":"Boston Red Sox","score":"4-9","home":false},{"date":"2026-08-19T20:10:00Z","won":true,"rd":1,"opp":"Boston Red Sox","score":"7-6","home":false},{"date":"2026-08-22T01:41:00Z","won":true,"rd":9,"opp":"Cincinnati Reds","score":"9-0","home":true},{"date":"2026-08-23T00:10Z","won":false,"rd":-6,"opp":"Cincinnati Reds","score":"5-11","home":true},{"date":"2026-08-23T20:15Z","won":true,"rd":2,"opp":"Cincinnati Reds","score":"5-3","home":true},{"date":"2026-08-25T01:40:00Z","won":false,"rd":-7,"opp":"Chicago Cubs","score":"0-7","home":true},{"date":"2026-08-26T01:40:00Z","won":true,"rd":1,"opp":"Chicago Cubs","score":"5-4","home":true},{"date":"2026-08-26T19:41:00Z","won":true,"rd":2,"opp":"Chicago Cubs","score":"2-0","home":true},{"date":"2026-08-28T01:46:00Z","won":false,"rd":-5,"opp":"San Francisco Giants","score":"1-6","home":false},{"date":"2026-08-29T02:16:00Z","won":true,"rd":4,"opp":"San Francisco Giants","score":"10-6","home":false},{"date":"2026-08-29T20:05Z","won":true,"rd":6,"opp":"San Francisco Giants","score":"7-1","home":false},{"date":"2026-08-30T02:05Z","won":false,"rd":-5,"opp":"San Francisco Giants","score":"2-7","home":false},{"date":"2026-09-01T01:41:00Z","won":false,"rd":-1,"opp":"Philadelphia Phillies","score":"1-2","home":true},{"date":"2026-09-02T01:41:00Z","won":false,"rd":-6,"opp":"Philadelphia Phillies","score":"1-7","home":true},{"date":"2026-09-02T19:41:00Z","won":true,"rd":1,"opp":"Philadelphia Phillies","score":"1-0","home":true},{"date":"2026-09-05T00:11:00Z","won":false,"rd":-2,"opp":"Houston Astros","score":"1-3","home":false},{"date":"2026-09-05T23:16:00Z","won":true,"rd":1,"opp":"Houston Astros","score":"4-3","home":false},{"date":"2026-09-06T18:10:00Z","won":true,"rd":1,"opp":"Houston Astros","score":"3-2","home":false},{"date":"2026-09-07T18:11:00Z","won":true,"rd":1,"opp":"Kansas City Royals","score":"5-4","home":false},{"date":"2026-09-08T23:40:00Z","won":true,"rd":2,"opp":"Kansas City Royals","score":"5-3","home":false},{"date":"2026-09-09T23:41:00Z","won":false,"rd":-3,"opp":"Kansas City Royals","score":"2-5","home":false},{"date":"2026-09-12T01:41:00Z","won":true,"rd":8,"opp":"Texas Rangers","score":"9-1","home":true},{"date":"2026-09-13T00:11:00Z","won":false,"rd":-4,"opp":"Texas Rangers","score":"2-6","home":true},{"date":"2026-09-13T20:10Z","won":false,"rd":-1,"opp":"Texas Rangers","score":"6-7","home":true},{"date":"2026-09-15T01:41:00Z","won":true,"rd":1,"opp":"Miami Marlins","score":"8-7","home":true},{"date":"2026-09-16T01:40:00Z","won":false,"rd":-2,"opp":"Miami Marlins","score":"2-4","home":true},{"date":"2026-09-17T01:41:00Z","won":false,"rd":-1,"opp":"Miami Marlins","score":"3-4","home":true},{"date":"2026-09-19T01:41:00Z","won":false,"rd":-7,"opp":"New York Yankees","score":"2-9","home":true},{"date":"2026-09-20T00:10:00Z","won":true,"rd":2,"opp":"New York Yankees","score":"5-3","home":true},{"date":"2026-09-20T20:11:00Z","won":true,"rd":4,"opp":"New York Yankees","score":"8-4","home":true}];
+        var formGames = [{"date":"2026-08-01T23:16:00Z","won":true,"rd":4,"opp":"Cleveland Guardians","score":"12-8","home":false},{"date":"2026-08-02T17:40Z","won":false,"rd":-5,"opp":"Cleveland Guardians","score":"0-5","home":false},{"date":"2026-08-04T01:41:00Z","won":true,"rd":4,"opp":"San Diego Padres","score":"5-1","home":true},{"date":"2026-08-05T01:41:00Z","won":false,"rd":-5,"opp":"San Diego Padres","score":"4-9","home":true},{"date":"2026-08-06T01:41:00Z","won":true,"rd":6,"opp":"San Diego Padres","score":"10-4","home":true},{"date":"2026-08-07T01:41:00Z","won":false,"rd":-4,"opp":"San Diego Padres","score":"1-5","home":true},{"date":"2026-08-08T01:41:00Z","won":true,"rd":1,"opp":"Los Angeles Dodgers","score":"4-3","home":true},{"date":"2026-08-09T00:11:00Z","won":false,"rd":-1,"opp":"Los Angeles Dodgers","score":"1-2","home":true},{"date":"2026-08-09T20:10Z","won":true,"rd":2,"opp":"Los Angeles Dodgers","score":"4-2","home":true},{"date":"2026-08-11T01:40:00Z","won":true,"rd":9,"opp":"Colorado Rockies","score":"9-0","home":true},{"date":"2026-08-12T01:41:00Z","won":false,"rd":-1,"opp":"Colorado Rockies","score":"2-3","home":true},{"date":"2026-08-12T19:40:00Z","won":false,"rd":-2,"opp":"Colorado Rockies","score":"4-6","home":true},{"date":"2026-08-14T23:16:00Z","won":true,"rd":2,"opp":"Atlanta Braves","score":"2-0","home":false},{"date":"2026-08-15T23:15:00Z","won":true,"rd":7,"opp":"Atlanta Braves","score":"10-3","home":false},{"date":"2026-08-16T17:35Z","won":false,"rd":-2,"opp":"Atlanta Braves","score":"3-5","home":false},{"date":"2026-08-17T23:11:00Z","won":false,"rd":-10,"opp":"Boston Red Sox","score":"1-11","home":false},{"date":"2026-08-18T23:11:00Z","won":false,"rd":-5,"opp":"Boston Red Sox","score":"4-9","home":false},{"date":"2026-08-19T20:10:00Z","won":true,"rd":1,"opp":"Boston Red Sox","score":"7-6","home":false},{"date":"2026-08-22T01:41:00Z","won":true,"rd":9,"opp":"Cincinnati Reds","score":"9-0","home":true},{"date":"2026-08-23T00:10Z","won":false,"rd":-6,"opp":"Cincinnati Reds","score":"5-11","home":true},{"date":"2026-08-23T20:15Z","won":true,"rd":2,"opp":"Cincinnati Reds","score":"5-3","home":true},{"date":"2026-08-25T01:40:00Z","won":false,"rd":-7,"opp":"Chicago Cubs","score":"0-7","home":true},{"date":"2026-08-26T01:40:00Z","won":true,"rd":1,"opp":"Chicago Cubs","score":"5-4","home":true},{"date":"2026-08-26T19:41:00Z","won":true,"rd":2,"opp":"Chicago Cubs","score":"2-0","home":true},{"date":"2026-08-28T01:46:00Z","won":false,"rd":-5,"opp":"San Francisco Giants","score":"1-6","home":false},{"date":"2026-08-29T02:16:00Z","won":true,"rd":4,"opp":"San Francisco Giants","score":"10-6","home":false},{"date":"2026-08-29T20:05Z","won":true,"rd":6,"opp":"San Francisco Giants","score":"7-1","home":false},{"date":"2026-08-30T02:05Z","won":false,"rd":-5,"opp":"San Francisco Giants","score":"2-7","home":false},{"date":"2026-09-01T01:41:00Z","won":false,"rd":-1,"opp":"Philadelphia Phillies","score":"1-2","home":true},{"date":"2026-09-02T01:41:00Z","won":false,"rd":-6,"opp":"Philadelphia Phillies","score":"1-7","home":true},{"date":"2026-09-02T19:41:00Z","won":true,"rd":1,"opp":"Philadelphia Phillies","score":"1-0","home":true},{"date":"2026-09-05T00:11:00Z","won":false,"rd":-2,"opp":"Houston Astros","score":"1-3","home":false},{"date":"2026-09-05T23:16:00Z","won":true,"rd":1,"opp":"Houston Astros","score":"4-3","home":false},{"date":"2026-09-06T18:10:00Z","won":true,"rd":1,"opp":"Houston Astros","score":"3-2","home":false},{"date":"2026-09-07T18:11:00Z","won":true,"rd":1,"opp":"Kansas City Royals","score":"5-4","home":false},{"date":"2026-09-08T23:40:00Z","won":true,"rd":2,"opp":"Kansas City Royals","score":"5-3","home":false},{"date":"2026-09-09T23:41:00Z","won":false,"rd":-3,"opp":"Kansas City Royals","score":"2-5","home":false},{"date":"2026-09-12T01:41:00Z","won":true,"rd":8,"opp":"Texas Rangers","score":"9-1","home":true},{"date":"2026-09-13T00:11:00Z","won":false,"rd":-4,"opp":"Texas Rangers","score":"2-6","home":true},{"date":"2026-09-13T20:10Z","won":false,"rd":-1,"opp":"Texas Rangers","score":"6-7","home":true},{"date":"2026-09-15T01:41:00Z","won":true,"rd":1,"opp":"Miami Marlins","score":"8-7","home":true},{"date":"2026-09-16T01:40:00Z","won":false,"rd":-2,"opp":"Miami Marlins","score":"2-4","home":true},{"date":"2026-09-17T01:41:00Z","won":false,"rd":-1,"opp":"Miami Marlins","score":"3-4","home":true},{"date":"2026-09-19T01:41:00Z","won":false,"rd":-7,"opp":"New York Yankees","score":"2-9","home":true},{"date":"2026-09-20T00:10:00Z","won":true,"rd":2,"opp":"New York Yankees","score":"5-3","home":true},{"date":"2026-09-20T20:11:00Z","won":true,"rd":4,"opp":"New York Yankees","score":"8-4","home":true},{"date":"2026-09-23T00:41:00Z","won":true,"rd":5,"opp":"Colorado Rockies","score":"7-2","home":false},{"date":"2026-09-24T00:41:00Z","won":true,"rd":2,"opp":"Colorado Rockies","score":"5-3","home":false},{"date":"2026-09-24T19:11:00Z","won":true,"rd":4,"opp":"Colorado Rockies","score":"12-8","home":false},{"date":"2026-09-26T01:41:00Z","won":true,"rd":7,"opp":"San Diego Padres","score":"11-4","home":false}];
         new Chart(formCtx, {
             type: 'bar',
             data: {
@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
             data: {
                 labels: ['Home', 'Away'],
                 datasets: [
-                    { label: 'Wins', data: [45, 37], backgroundColor: '#28a745' },
+                    { label: 'Wins', data: [45, 41], backgroundColor: '#28a745' },
                     { label: 'Losses', data: [36, 38], backgroundColor: '#dc3545' }
                 ]
             },
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function() {
             data: {
                 labels: ['As Favorite', 'As Underdog'],
                 datasets: [
-                    { label: 'Wins', data: [29, 30], backgroundColor: '#28a745' },
+                    { label: 'Wins', data: [32, 31], backgroundColor: '#28a745' },
                     { label: 'Losses', data: [19, 34], backgroundColor: '#dc3545' }
                 ]
             },
